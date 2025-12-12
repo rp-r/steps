@@ -28,7 +28,8 @@ function App() {
   }
 
   return (
-    <div className='steps'>
+
+    <> <div className='steps'>
       <div className='numbers'>
         <div className={step >= 1 ? "active" : " "}>1</div>
         <div className={step >= 2 ? "active" : " "}>2</div>
@@ -39,6 +40,8 @@ function App() {
 
       <StepMessage step={step}>{messages[step - 1]} </StepMessage>
 
+
+
       <div className='buttons'>
 
 
@@ -46,7 +49,14 @@ function App() {
         <Button bgcolor={'#7950f2'} textcolor={'white'} onClick={handlePervious} ><span>'⛵' </span>Pervious</Button>
         <Button bgcolor={'#7950f2'} textcolor={'white'} onClick={handleNext} >Next <span>'🛵' </span> <span>'🛵' </span></Button>
       </div>
+
+
     </div>
+      <StepMessage step={1}><p>good to see you <span>🚒</span></p> </StepMessage>
+      <StepMessage step={2}><p><span>🚲</span>good to see you <span>🚒</span></p> </StepMessage></>
+
+
+
   )
 }
 
